@@ -1,4 +1,5 @@
 import { Routes, Route, NavLink } from "react-router-dom";
+import Header from './components/Header';
 
 const Shell = ({ children }) => (
   <>
@@ -49,6 +50,8 @@ const About = () => (
 
 export default function App(){
   return (
+    <>
+    <Header />
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/gallery" element={<Gallery/>}/>
@@ -56,5 +59,6 @@ export default function App(){
       <Route path="/about" element={<About/>}/>
       <Route path="*" element={<Shell><h1>Not Found</h1></Shell>} />
     </Routes>
+  </>
   );
 }
