@@ -1,6 +1,6 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import Header from './components/Header';
-
+import Footer from './components/Footer';
 const Shell = ({ children }) => (
   <>
     <nav style={{display:"flex",gap:16,padding:"12px 20px",borderBottom:"1px solid #e5e7eb",position:"sticky",top:0,background:"#fff"}}>
@@ -52,6 +52,7 @@ export default function App(){
   return (
     <>
     <Header />
+    <Footer />
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/gallery" element={<Gallery/>}/>
