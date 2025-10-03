@@ -1,16 +1,11 @@
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 const Shell = ({ children }) => (
-  <>
-    <nav style={{display:"flex",gap:16,padding:"12px 20px",borderBottom:"1px solid #e5e7eb",position:"sticky",top:0,background:"#fff"}}>
-      <NavLink to="/" style={{fontWeight:700}}>Marcy Ink</NavLink>
-      <NavLink to="/gallery">Gallery</NavLink>
-      <NavLink to="/booking">Booking</NavLink>
-      <NavLink to="/about">About</NavLink>
-    </nav>
-    <div style={{maxWidth:960,margin:"32px auto",padding:"0 20px"}}>{children}</div>
-  </>
+  <div style={{ maxWidth: 960, margin: "32px auto", padding: "0 20px" }}>
+    {children}
+  </div>
 );
 
 const Home = () => (
@@ -51,15 +46,17 @@ const About = () => (
 export default function App(){
   return (
     <>
-    <Header />
-    <Footer />
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/gallery" element={<Gallery/>}/>
-      <Route path="/booking" element={<Booking/>}/>
-      <Route path="/about" element={<About/>}/>
-      <Route path="*" element={<Shell><h1>Not Found</h1></Shell>} />
-    </Routes>
-  </>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/gallery" element={<Gallery/>}/>
+          <Route path="/booking" element={<Booking/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="*" element={<Shell><h1>Not Found</h1></Shell>} />
+        </Routes>
+      </main>
+      <Footer />
+    </>
   );
 }
