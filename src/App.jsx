@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Header from './components/Header';
+import Hero from './components/Hero';
 import Footer from './components/Footer';
 const Shell = ({ children }) => (
   <div style={{ maxWidth: 960, margin: "32px auto", padding: "0 20px" }}>
@@ -9,9 +10,20 @@ const Shell = ({ children }) => (
 );
 
 const Home = () => (
+  <>
+    <Hero />
+  </>
+);
+
+const HomeBookingAnchor = () => (
   <Shell>
-    <h1>Custom Tattoos, Clean Lines.</h1>
-    <p>Booking open. Replace this with your vibe, policies, and aftercare notes.</p>
+    <section id="booking">
+      <h2>Booking</h2>
+      <p>Drop your form later. For now, email works:</p>
+      <a href="mailto:you@example.com" style={{display:"inline-block",marginTop:12,padding:"10px 14px",borderRadius:8,background:"#111",color:"#fff"}}>
+        Email for Appointment
+      </a>
+    </section>
   </Shell>
 );
 
@@ -49,7 +61,10 @@ export default function App(){
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/" element={<>
+            <Home/>
+            <HomeBookingAnchor/>
+          </>}/>
           <Route path="/gallery" element={<Gallery/>}/>
           <Route path="/booking" element={<Booking/>}/>
           <Route path="/about" element={<About/>}/>
