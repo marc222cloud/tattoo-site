@@ -1,6 +1,6 @@
 header {
-  background-color: #fff;
-  border-bottom: 1px solid #e5e7eb;
+  background-color: #111; /* was #fff */
+  border-bottom: 1px solid #222; /* was #e5e7eb */
   padding: 14px 20px;
 }
 
@@ -27,7 +27,7 @@ header {
 
 .header-link {
   text-decoration: none;
-  color: #111;
+  color: #eee; /* was #111 */
   font-weight: 500;
   transition: color 0.2s;
 }
@@ -39,8 +39,9 @@ header {
 .header-cta {
   padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid #e5e7eb;
-  background: #fff;
+  border: 1px solid #333; /* was #e5e7eb */
+  background: #111; /* was #fff */
+  color: #fff;
   cursor: pointer;
   font-weight: 600;
 }

@@ -12,8 +12,7 @@ export default function Hero() {
 
           <p className="hero-desc">
             Based in Utica. Custom, clean line work and thoughtful design.
-            Booking open—tap below. Replace this copy with your vibe, policies,
-            and aftercare notes.
+            Booking open—tap below. 
           </p>
 
           <a href="#booking" className="hero-cta">Book Now</a>

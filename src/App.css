@@ -1,4 +1,7 @@
 /* Layout baseline so footer sits at bottom on short pages */
+/* Global reset & dark canvas */
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #111; }
 html, body, #root { height: 100%; }
 #root {
   min-height: 100vh;
