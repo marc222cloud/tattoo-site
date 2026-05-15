@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero-inner">
         {/* Left column: text block */}
         <div className="hero-copy">
-          <h1 className="hero-title">Marcy Ink Tattoo & Piercing Studio</h1>
+          <h1 className="hero-title">Archangel Tattoo & Piercing Studio</h1>
 
           <p className="hero-location">Utica</p>
 

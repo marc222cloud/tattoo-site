@@ -13,7 +13,7 @@ export default function Footer() {
         
         {/* Logo or Image */}
         <div>
-          <img src="/logo.png" alt="Marcy Ink" style={{ width: 60 }} />
+          <img src="/logo.png" alt="Archangel" style={{ width: 60 }} />
         </div>
         
         {/* Navigation */}
@@ -42,13 +42,13 @@ export default function Footer() {
         {/* Address */}
         <div>
           <h4 style={{ color: "red", marginBottom: 8 }}>Address</h4>
-          <p>123 Ink Street</p>
-          <p>Utica, NY</p>
+          <p>102 Genesee St</p>
+          <p>Utica, NY, 13502</p>
         </div>
       </div>
 
       <p style={{ fontSize: "0.9rem", marginTop: 32, color: "#aaa" }}>
-        © {new Date().getFullYear()} Marcy Ink. All rights reserved.
+        © {new Date().getFullYear()} Archangel. All rights reserved.
       </p>
     </footer>
   );
