@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Artists from './components/Artists';
 import Highlights from './components/Highlights';
+import About from './components/About';
 import Footer from './components/Footer';
 
 // Simple layout container (inline, no separate component)
@@ -17,6 +18,7 @@ const Home = () => (
     <Artists />
     {/* Highlights paints its own full-width black band */}
     <Highlights galleryHref="/gallery" />
+    <About />
   </>
 );
 
@@ -45,14 +47,6 @@ const Booking = () => (
   </section>
 );
 
-const About = () => (
-  <section style={{ background: 'transparent' }}>
-    <Container>
-      <h1>About</h1>
-      <p>Techno producer. Web dev. Tattoo artist. Based in ____.</p>
-    </Container>
-  </section>
-);
 
 export default function App(){
   return (
