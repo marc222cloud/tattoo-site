@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Artists from './components/Artists';
 import Highlights from './components/Highlights';
 import Footer from './components/Footer';
 
@@ -13,6 +14,7 @@ const Container = ({ children }) => (
 const Home = () => (
   <>
     <Hero />
+    <Artists />
     {/* Highlights paints its own full-width black band */}
     <Highlights galleryHref="/gallery" />
   </>
