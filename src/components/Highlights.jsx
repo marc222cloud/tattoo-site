@@ -1,4 +1,8 @@
+
 import './Highlights.css';
+import tattoo1 from '../assets/tattoo1.jpg';
+import tattoo2 from '../assets/tattoo2.jpg';
+import tattoo3 from '../assets/tattoo3.webp';
 
 export default function Highlights({
   title = 'Portfolio',
@@ -6,8 +10,14 @@ export default function Highlights({
   galleryHref = '/gallery',
   onGalleryClick,
 }) {
-  // Take the first three images if provided
-  const thumbs = images.slice(0, 3);
+  // Take the first three images if provided, otherwise use defaults
+  const defaultImages = [
+    { src: tattoo1, alt: 'Anime tattoo artwork' },
+    { src: tattoo2, alt: 'Realism portrait tattoo artwork' },
+    { src: tattoo3, alt: 'Eagle tattoo artwork' },
+  ];
+
+  const thumbs = (images.length ? images : defaultImages).slice(0, 3);
 
   return (
     <section className="highlights" aria-labelledby="hl-title">
