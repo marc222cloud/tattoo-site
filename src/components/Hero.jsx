@@ -1,27 +1,29 @@
 import './Hero.css';
+import heroBg from '../assets/tattoobg3.jpg';
+import logo from '../assets/tattoologo2.png';
 
 export default function Hero() {
   return (
-    <section className="hero" id="home">
-      <div className="hero-inner">
-        {/* Left column: text block */}
-        <div className="hero-copy">
-          <h1 className="hero-title">Archangel Tattoo & Piercing Studio</h1>
+    <section
+      className="hero"
+      id="home"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    >
+      <div className="hero-overlay">
+        <div className="hero-content">
+          <img
+            src={logo}
+            alt="Archangel Tattoo & Piercing"
+            className="hero-logo"
+          />
 
-          <p className="hero-location">Utica</p>
+          <h1 className="hero-title">
+            ARCHANGEL TATTOO & PIERCING STUDIO
+          </h1>
 
-          <p className="hero-desc">
-            Based in Utica. Custom, clean line work and thoughtful design.
-            Booking open—tap below. 
-          </p>
-
-          <a href="#booking" className="hero-cta">Book Now</a>
-        </div>
-
-        {/* Right column: image placeholder */}
-        <div className="hero-media" aria-hidden="true">
-          {/* Replace `/hero.jpg` with your real image later */}
-          <img src="/hero.jpg" alt="Tattoo example" />
+          <a href="#booking" className="hero-cta">
+            Book Now
+          </a>
         </div>
       </div>
     </section>
