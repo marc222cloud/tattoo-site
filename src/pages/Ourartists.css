@@ -1,0 +1,228 @@
+.our-artists-page {
+  background: #000;
+  color: #fff;
+}
+
+.our-artists-hero {
+  min-height: 360px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.our-artists-hero__overlay {
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.our-artists-hero__content {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+.our-artists-hero h1 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.our-artists-hero h1::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: #d60000;
+}
+
+.our-artists-hero p {
+  margin: 0;
+  color: #f0f0f0;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.our-artists-list {
+  padding: 88px 40px 104px;
+}
+
+.our-artists-list__container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.artist-profile {
+  display: flex;
+  align-items: stretch;
+  gap: 64px;
+  padding: 0 0 72px;
+  margin: 0 0 72px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.artist-profile:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.artist-profile--reverse {
+  flex-direction: row-reverse;
+}
+
+.artist-profile__image-wrap,
+.artist-profile__content {
+  flex: 1 1 0;
+}
+
+.artist-profile__image-wrap {
+  min-height: 380px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #2d2d2d;
+}
+
+.artist-profile__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.artist-profile:hover .artist-profile__image {
+  transform: scale(1.025);
+  filter: brightness(1.08);
+}
+
+.artist-profile__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 28px 0;
+}
+
+.artist-profile__specialty {
+  margin: 0 0 6px;
+  color: #d60000;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.artist-profile h2 {
+  margin: 0;
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.artist-profile__accent {
+  width: 48px;
+  height: 2px;
+  margin: 20px 0 24px;
+  background: #d60000;
+}
+
+.artist-profile__description {
+  max-width: 500px;
+  margin: 0;
+  color: #e5e5e5;
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.artist-profile__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.artist-profile__button {
+  min-width: 150px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border: 1px solid #d60000;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.artist-profile__button--primary {
+  background: #d60000;
+}
+
+.artist-profile__button--outline {
+  background: transparent;
+}
+
+.artist-profile__button:hover {
+  border-color: #f01a1a;
+  background: #f01a1a;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 820px) {
+  .our-artists-list {
+    padding: 64px 24px 80px;
+  }
+
+  .artist-profile,
+  .artist-profile--reverse {
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 56px;
+    margin-bottom: 56px;
+  }
+
+  .artist-profile__image-wrap {
+    flex: none;
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .artist-profile__content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-artists-hero {
+    min-height: 310px;
+  }
+
+  .our-artists-hero__overlay {
+    padding: 52px 20px;
+  }
+
+  .our-artists-list {
+    padding: 52px 20px 64px;
+  }
+
+  .artist-profile__actions,
+  .artist-profile__button {
+    width: 100%;
+  }
+}

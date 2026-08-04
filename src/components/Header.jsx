@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Header.css';
 import logo from '../assets/tattoologo1.png';
 
@@ -6,20 +7,20 @@ export default function Header() {
     <header>
       <div className="header-inner">
         {/* Left: Brand / Logo */}
-        <div className="header-brand">
+        <Link to="/" className="header-brand" aria-label="Archangel home">
           <img src={logo} alt="Archangel Tattoo & Piercing" />
-        </div>
+        </Link>
 
         {/* Right: Nav + CTA */}
         <nav className="header-nav" aria-label="Primary">
-          <a href="#home" className="header-link">Home</a>
+          <Link to="/" className="header-link">Home</Link>
           <span> | </span>
-          <a href="#artists" className="header-link">Artists</a>
+          <Link to="/artists" className="header-link">Artists</Link>
           <span> | </span>
-          <a href="#portfolio" className="header-link">Portfolio</a>
+          <Link to="/gallery" className="header-link">Portfolio</Link>
           <span> | </span>
-          <a href="#about" className="header-link">About</a>
-          <a href="#booking" className="header-link header-cta">Book Now</a>
+          <Link to="/about" className="header-link">About</Link>
+          <Link to="/booking" className="header-link header-cta">Book Now</Link>
         </nav>
       </div>
     </header>

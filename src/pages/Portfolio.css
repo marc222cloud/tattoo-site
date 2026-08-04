@@ -1,0 +1,148 @@
+.portfolio-page {
+  background: #000;
+  color: #fff;
+}
+
+.portfolio-hero {
+  min-height: 380px;
+  background-image: url('../assets/artist3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.portfolio-hero__overlay {
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.portfolio-hero__content {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+.portfolio-hero h1 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: clamp(3.25rem, 7vw, 5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.portfolio-hero h1::after {
+  content: '';
+  width: 64px;
+  height: 3px;
+  display: block;
+  margin: 18px auto 0;
+  background: #d60000;
+}
+
+.portfolio-hero p {
+  margin: 0;
+  color: #f0f0f0;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.portfolio-gallery {
+  padding: 76px 40px 104px;
+}
+
+.portfolio-gallery__container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.portfolio-gallery__heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.portfolio-gallery__heading > p {
+  margin: 0 0 4px;
+  color: #d60000;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.portfolio-gallery__heading h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.portfolio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 42px;
+}
+
+.portfolio-filter {
+  min-width: 104px;
+  padding: 10px 20px;
+  border: 1px solid #4a4a4a;
+  border-radius: 10px;
+  background: #171717;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.portfolio-filter:hover,
+.portfolio-filter--active {
+  border-color: #d60000;
+  background: #d60000;
+  transform: translateY(-2px);
+}
+
+.portfolio-filter:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-gallery {
+    padding: 60px 24px 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-hero {
+    min-height: 320px;
+  }
+
+  .portfolio-hero__overlay {
+    padding: 52px 20px;
+  }
+
+  .portfolio-gallery {
+    padding: 52px 20px 68px;
+  }
+
+  .portfolio-filters {
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .portfolio-filter {
+    min-width: calc(50% - 4px);
+  }
+}

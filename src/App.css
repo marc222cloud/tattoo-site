@@ -47,3 +47,206 @@ a {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+/* Home page scale refinements */
+.home-page .hero,
+.home-page .hero-overlay {
+  min-height: 310px;
+}
+
+.home-page .hero-overlay {
+  padding: 18px 20px 30px;
+}
+
+.home-page .hero-content {
+  transform: translateY(-12px);
+}
+
+.home-page .hero-logo {
+  width: 300px;
+  margin-bottom: -24px;
+}
+
+.home-page .hero-title {
+  font-size: 2.65rem;
+  margin: -8px 0 13px;
+}
+
+.home-page .hero-cta {
+  padding: 12px 46px;
+  border-radius: 10px;
+  font-size: 1.15rem;
+}
+
+.home-page .artists {
+  padding: 42px 40px 58px;
+}
+
+.home-page .artists-header {
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+
+.home-page .artists-header h2,
+.home-page .hl-title {
+  font-size: 2.15rem;
+}
+
+.home-page .artists-header h2 {
+  margin-bottom: 17px;
+}
+
+.home-page .artists-header p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.home-page .artists-grid {
+  max-width: 960px;
+  margin: 0 auto;
+  gap: 48px;
+}
+
+.home-page .artist-image {
+  margin-bottom: 22px;
+}
+
+.home-page .artist-card h3 {
+  font-size: 1.25rem;
+}
+
+.home-page .artist-card p {
+  font-size: 0.9rem;
+}
+
+.home-page .highlights {
+  max-width: 1050px;
+  padding: 38px 42px 42px;
+}
+
+.home-page .hl-header {
+  margin-bottom: 25px;
+}
+
+.home-page .hl-gallery-btn {
+  padding: 13px 32px;
+  font-size: 1.05rem;
+}
+
+.home-page .hl-grid {
+  gap: 36px;
+}
+
+.home-page .hl-img {
+  height: 330px;
+}
+
+.home-page .about,
+.home-page .about-overlay {
+  min-height: 360px;
+}
+
+.home-page .about-overlay {
+  padding: 44px 24px;
+}
+
+.home-page .about-title {
+  margin-bottom: 25px;
+  font-size: 2.35rem;
+}
+
+.home-page .about-text {
+  max-width: 680px;
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+  .home-page .hero,
+  .home-page .hero-overlay {
+    min-height: 270px;
+  }
+
+  .home-page .hero-overlay {
+    padding-bottom: 24px;
+  }
+
+  .home-page .hero-content {
+    transform: translateY(-8px);
+  }
+
+  .home-page .hero-logo {
+    width: 220px;
+    margin-bottom: -18px;
+  }
+
+  .home-page .hero-title {
+    font-size: 1.75rem;
+    margin: -4px 0 12px;
+  }
+
+  .home-page .hero-cta {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  .home-page .artists {
+    padding: 38px 24px 50px;
+  }
+
+  .home-page .artists-header {
+    margin-bottom: 32px;
+  }
+
+  .home-page .artists-header h2,
+  .home-page .hl-title {
+    font-size: 2rem;
+  }
+
+  .home-page .artists-header p {
+    font-size: 0.95rem;
+  }
+
+  .home-page .artists-grid {
+    gap: 38px;
+  }
+
+  .home-page .artist-image {
+    max-width: 380px;
+  }
+
+  .home-page .highlights {
+    padding: 28px 24px 34px;
+  }
+
+  .home-page .hl-header {
+    margin-bottom: 22px;
+  }
+
+  .home-page .hl-grid {
+    gap: 24px;
+  }
+
+  .home-page .hl-img {
+    height: 300px;
+  }
+
+  .home-page .about,
+  .home-page .about-overlay {
+    min-height: 320px;
+  }
+
+  .home-page .about-overlay {
+    padding: 38px 24px;
+  }
+
+  .home-page .about-title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .home-page .about-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}

@@ -6,6 +6,10 @@ import Artists from './components/Artists';
 import Highlights from './components/Highlights';
 import About from './components/About';
 import Footer from './components/Footer';
+import Ourartists from './pages/Ourartists';
+import Contact from './pages/Contact';
+import Portfolio from './pages/Portfolio';
+import Aboutus from './pages/Aboutus';
 
 // Simple layout container (inline, no separate component)
 const Container = ({ children }) => (
@@ -13,40 +17,14 @@ const Container = ({ children }) => (
 );
 
 const Home = () => (
-  <>
+  <div className="home-page">
     <Hero />
     <Artists />
     {/* Highlights paints its own full-width black band */}
     <Highlights galleryHref="/gallery" />
     <About />
-  </>
+  </div>
 );
-
-const Gallery = () => (
-  <section style={{ background: 'transparent' }}>
-    <Container>
-      <h1>Gallery</h1>
-      <div style={{display:'flex', flexWrap:'wrap', gap:12}}>
-        {Array.from({length:8}).map((_,i)=>(
-          <div key={i} style={{height:140, background:'#2a2a2a', borderRadius:12, flex:'1 1 180px'}} />
-        ))}
-      </div>
-    </Container>
-  </section>
-);
-
-const Booking = () => (
-  <section style={{ background: 'transparent' }}>
-    <Container>
-      <h1>Booking</h1>
-      <p>Drop your form later. For now:</p>
-      <a href="mailto:you@example.com" style={{display:'inline-block',marginTop:12,padding:'10px 14px',borderRadius:8,background:'#111',color:'#fff'}}>
-        Email for Appointment
-      </a>
-    </Container>
-  </section>
-);
-
 
 export default function App(){
   return (
@@ -55,9 +33,10 @@ export default function App(){
       <main>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/gallery" element={<Gallery/>}/>
-          <Route path="/booking" element={<Booking/>}/>
-          <Route path="/about" element={<About/>}/>
+          <Route path="/gallery" element={<Portfolio/>}/>
+          <Route path="/booking" element={<Contact/>}/>
+          <Route path="/artists" element={<Ourartists/>}/>
+          <Route path="/about" element={<Aboutus/>}/>
           <Route path="*" element={<section><Container><h1>Not Found</h1></Container></section>} />
         </Routes>
       </main>

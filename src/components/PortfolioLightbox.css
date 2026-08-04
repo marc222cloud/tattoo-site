@@ -1,0 +1,121 @@
+.portfolio-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(5px);
+}
+
+.portfolio-lightbox__dialog {
+  position: relative;
+  width: min(100%, 1000px);
+  max-height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-lightbox__close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #555;
+  border-radius: 50%;
+  background: #171717;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.portfolio-lightbox__close:hover {
+  background: #d60000;
+  transform: scale(1.05);
+}
+
+.portfolio-lightbox__image-wrap {
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-lightbox__image-wrap img {
+  max-width: 100%;
+  max-height: calc(100vh - 150px);
+  display: block;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
+}
+
+.portfolio-lightbox__controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.portfolio-lightbox__controls button {
+  min-width: 130px;
+  padding: 10px 18px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  background: #171717;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.portfolio-lightbox__controls button:hover {
+  border-color: #d60000;
+  background: #d60000;
+}
+
+.portfolio-lightbox__controls p {
+  margin: 0;
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+.portfolio-lightbox button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+  .portfolio-lightbox {
+    padding: 20px;
+  }
+
+  .portfolio-lightbox__close {
+    top: -12px;
+    right: -8px;
+  }
+
+  .portfolio-lightbox__controls {
+    gap: 8px;
+  }
+
+  .portfolio-lightbox__controls button {
+    min-width: 0;
+    padding: 10px 13px;
+  }
+}
